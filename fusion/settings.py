@@ -152,3 +152,5 @@ if SENTRY_DSN:
     sentry_sdk.init(
         dsn=SENTRY_DSN, integrations=[DjangoIntegration()],
     )
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
