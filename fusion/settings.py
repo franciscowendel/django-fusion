@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 
 parse_data = partial(dj_database_url.parse, conn_max_age=600)
@@ -85,6 +86,23 @@ DATABASES = {
     'default': config('DATABASE_URL', default=default_db_url, cast=parse_data)
 }
 
+
+"""
+DATABASES = {
+    'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'fusion',
+            'USER': 'mclovin',
+            'PASSWORD': '19013301',
+            'HOST': 'localhost',
+            'PORT': '5432',
+    }
+}
+
+I thought in use docker with postgres image but I didn't! Why? I don't know why, I just realize that it is just 
+a simple django web page and, you know?! Why use docker in it? Sorry about the explanation!
+ 
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
