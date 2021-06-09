@@ -6,6 +6,7 @@ from .models import (
     Feature,
 
 )
+from django.contrib import messages
 from .forms import ContactForm
 
 
@@ -20,3 +21,12 @@ class IndexView(FormView):
         context['employess'] = Employee.objects.order_by('?').all()  # noqa
         context['features'] = Feature.objects.order_by('?').all()  # noqa
         return context
+
+    def form_valid(self, form, *args, **kwargs):
+        form.send_mail()
+        messages.success(self.request, 'Mensagem enviada com sucesso!')
+        return super(IndexView, self).form_valid(form, *args, **kwargs)  # noqa
+
+    def form_invalid(self, form, *args, **kwargs):
+        messages.error(self.request, 'Erro ao enviar a mensagem!')
+        return super(IndexView, self).form_invalid(form, *args, **kwargs)  # noqa
