@@ -17,6 +17,7 @@ pytest-cov = "*"
 codecov = "*"
 coverage = "*"
 model-mommy = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
