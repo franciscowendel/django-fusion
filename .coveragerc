@@ -12,5 +12,8 @@ omit =
     */urls.py
     */base/admin.py
     */base/apps.py
+    */base/models.py
+    */core/admin.py
+    */core/apps.py
     */migrations/*
     */tests/*
