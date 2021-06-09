@@ -9,7 +9,6 @@ dj-database-url = "*"
 psycopg2-binary = "*"
 python-decouple = "*"
 django-stdimage = "*"
-collectfast = "*"
 
 [dev-packages]
 flake8 = "*"
@@ -19,6 +18,7 @@ codecov = "*"
 coverage = "*"
 model-mommy = "*"
 requests = "*"
+collectfast = "*"
 
 [requires]
 python_version = "3.8"
