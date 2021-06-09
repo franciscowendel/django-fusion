@@ -10,9 +10,9 @@ def shuffle_filename(_instance, filename):
 
 
 class Base(models.Model):
-    criado = models.DateTimeField(auto_now_add=True)
-    atualizado = models.DateTimeField(auto_now=True)
-    ativo = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
 
     class Meta:
         abstract = True
