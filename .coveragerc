@@ -16,4 +16,4 @@ omit =
     */core/admin.py
     */core/apps.py
     */migrations/*
-    */tests/*
+    */core/test/*

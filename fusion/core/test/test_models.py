@@ -11,7 +11,7 @@ class ShuffleFilenameTestCase(TestCase):
         self.filename = f'{uuid.uuid4()}.png'
 
     def test_shuffle_filename(self):
-        file = shuffle_filename(None, 'tests.png')
+        file = shuffle_filename(None, 'test.png')
         self.assertTrue(len(file), len(self.filename))
 
 
