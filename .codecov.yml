@@ -1,0 +1,7 @@
+codecov:
+  token: "9724b635-ddbf-4474-8ef1-bab8a6c394cf"
+  bot: "codecov-io"
+  strict_yaml_branch: "yaml-config"
+  max_report_age: 24
+  notify:
+    after_n_builds: 2
