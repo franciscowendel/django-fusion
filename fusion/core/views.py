@@ -18,7 +18,7 @@ class IndexView(FormView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         context['services'] = Service.objects.order_by('?').all()  # noqa
-        context['employess'] = Employee.objects.order_by('?').all()  # noqa
+        context['employees'] = Employee.objects.order_by('?').all()  # noqa
         context['features'] = Feature.objects.order_by('?').all()  # noqa
         return context
 
