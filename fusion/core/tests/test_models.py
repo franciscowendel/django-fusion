@@ -1,5 +1,4 @@
 import uuid
-
 from django.test import TestCase
 from fusion.core.models import shuffle_filename
 from model_bakery import baker
