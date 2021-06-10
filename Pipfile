@@ -20,6 +20,7 @@ model-mommy = "*"
 requests = "*"
 collectfast = "*"
 sentry-sdk = "*"
+model-bakery = "*"
 
 [requires]
 python_version = "3.8"
