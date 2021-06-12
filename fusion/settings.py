@@ -180,5 +180,4 @@ REST_FRAMEWORK = {
         'anon': '10/minute',
         'user': '20/minute',
     }
-
 }
