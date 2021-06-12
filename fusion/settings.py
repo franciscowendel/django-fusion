@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -154,3 +155,8 @@ if SENTRY_DSN:
     )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
