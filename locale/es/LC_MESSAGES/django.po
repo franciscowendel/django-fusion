@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-11 21:42-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: base/admin.py:31
+msgid "Permissions"
+msgstr ""
+
+#: base/admin.py:34
+msgid "Important dates"
+msgstr ""
+
+#: base/admin.py:118
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: base/admin.py:128
+msgid "Password changed successfully."
+msgstr ""
+
+#: base/admin.py:148
+#, python-format
+msgid "Change password: %s"
+msgstr ""
+
+#: base/models.py:48
+msgid "first name"
+msgstr ""
+
+#: base/models.py:49
+msgid "email address"
+msgstr ""
+
+#: base/models.py:51
+msgid "staff status"
+msgstr ""
+
+#: base/models.py:53
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: base/models.py:56
+msgid "active"
+msgstr ""
+
+#: base/models.py:59
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: base/models.py:63
+msgid "date joined"
+msgstr ""
+
+#: base/models.py:72
+msgid "user"
+msgstr ""
+
+#: base/models.py:73
+msgid "users"
+msgstr ""
+
+#: fusion/core/forms.py:19
+msgid "Name"
+msgstr ""
+
+#: fusion/core/forms.py:20
+msgid "Email"
+msgstr ""
+
+#: fusion/core/forms.py:21
+msgid "Subject"
+msgstr ""
+
+#: fusion/core/forms.py:22
+msgid "Message"
+msgstr ""
+
+#: fusion/core/models.py:24 fusion/core/models.py:77
+msgid "Engrenagem"
+msgstr ""
+
+#: fusion/core/models.py:25
+msgid "Estatísticas"
+msgstr ""
+
+#: fusion/core/models.py:26
+msgid "Usuários"
+msgstr ""
+
+#: fusion/core/models.py:27 fusion/core/models.py:79
+msgid "Camadas"
+msgstr ""
+
+#: fusion/core/models.py:28
+msgid "Mobile"
+msgstr ""
+
+#: fusion/core/models.py:29 fusion/core/models.py:75
+msgid "Foguete"
+msgstr ""
+
+#: fusion/core/models.py:36
+msgid "Service"
+msgstr ""
+
+#: fusion/core/models.py:37
+msgid "Services"
+msgstr ""
+
+#: fusion/core/models.py:47
+msgid "Position"
+msgstr ""
+
+#: fusion/core/models.py:48
+msgid "Positions"
+msgstr ""
+
+#: fusion/core/models.py:65
+msgid "Employee"
+msgstr ""
+
+#: fusion/core/models.py:66
+msgid "Employees"
+msgstr ""
+
+#: fusion/core/models.py:76
+msgid "API"
+msgstr ""
+
+#: fusion/core/models.py:78 fusion/core/models.py:80
+msgid "Folha"
+msgstr ""
+
+#: fusion/core/models.py:87
+msgid "Feature"
+msgstr ""
+
+#: fusion/core/models.py:88
+msgid "Features"
+msgstr ""
+
+#: fusion/core/views.py:28
+msgid "Mensagem enviada com sucesso!"
+msgstr ""
+
+#: fusion/core/views.py:32
+msgid "Erro ao enviar a mensagem!"
+msgstr ""
