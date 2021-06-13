@@ -9,7 +9,21 @@ from .views import (
     EmployeeAPIView,
     FeaturesAPIView,
     FeatureAPIView,
+    ServiceViewSet,
+    PositionViewSet,
+    EmployeeViewSet,
+    FeatureViewSet,
 )
+
+from rest_framework.routers import SimpleRouter
+
+router = SimpleRouter()
+
+router.register('services', ServiceViewSet)
+router.register('positions', PositionViewSet)
+router.register('employees', EmployeeViewSet)
+router.register('features', FeatureViewSet)
+
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
