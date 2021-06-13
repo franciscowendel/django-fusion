@@ -22,6 +22,7 @@ from .serializers import (
 from rest_framework.generics import get_object_or_404
 
 from rest_framework import viewsets
+from rest_framework import mixins
 
 
 class IndexView(FormView):
@@ -111,3 +112,29 @@ class ServiceViewSet(viewsets.ModelViewSet):
 class PositionViewSet(viewsets.ModelViewSet):
     queryset = Position.objects.all()  # noqa
     serializer_class = PositionSerializer
+
+
+# API  versão 2 usando 'mixins'
+
+class EmployeeViewSet(
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    mixins.RetrieveModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
+    viewsets.GenericViewSet,
+):
+    queryset = Employee.objects.all()  # noqa
+    serializer_class = EmployeeSerializer
+
+
+class FeatureViewSet(
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    mixins.RetrieveModelMixin,
+    mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
+    viewsets.GenericViewSet,
+):
+    queryset = Feature.objects.all()  # noqa
+    serializer_class = FeatureSerializer
