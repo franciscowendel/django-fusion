@@ -72,8 +72,8 @@ class EmployeesAPIView(generics.ListCreateAPIView):
     serializer_class = EmployeeSerializer
 
     def get_queryset(self):
-        if self.kwargs.get('service_pk'):
-            return self.queryset.filter(service_id=self.kwargs.get('service_pk'))
+        if self.kwargs.get('position_pk'):
+            return self.queryset.filter(position_id=self.kwargs.get('position_pk'))
         return self.queryset.all()
 
 
@@ -82,10 +82,10 @@ class EmployeeAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EmployeeSerializer
 
     def get_object(self):
-        if self.kwargs.get('service_pk'):
-            return get_object_or_404(self.get_queryset(), service_id=self.kwargs.get('service_pk'),
-                                     employee_pk=self.kwargs.get('employee_pk'))
-        return get_object_or_404(self.get_queryset(), employee_pk=self.kwargs.get('employee_pk'))
+        if self.kwargs.get('position_pk'):
+            return get_object_or_404(self.get_queryset(), position_id=self.kwargs.get('position_pk'),
+                                     pk=self.kwargs.get('employee_pk'))
+        return get_object_or_404(self.get_queryset(), pk=self.kwargs.get('employee_pk'))
 
 
 class FeaturesAPIView(generics.ListCreateAPIView):
