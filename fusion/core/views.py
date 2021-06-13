@@ -19,6 +19,7 @@ from .serializers import (
     FeatureSerializer,
 
 )
+from rest_framework.generics import get_object_or_404
 
 
 class IndexView(FormView):
@@ -70,10 +71,21 @@ class EmployeesAPIView(generics.ListCreateAPIView):
     queryset = Employee.objects.all()  # noqa
     serializer_class = EmployeeSerializer
 
+    def get_queryset(self):
+        if self.kwargs.get('service_pk'):
+            return self.queryset.filter(service_id=self.kwargs.get('service_pk'))
+        return self.queryset.all()
+
 
 class EmployeeAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Employee.objects.all()  # noqa
     serializer_class = EmployeeSerializer
+
+    def get_object(self):
+        if self.kwargs.get('service_pk'):
+            return get_object_or_404(self.get_queryset(), service_id=self.kwargs.get('service_pk'),
+                                     employee_pk=self.kwargs.get('employee_pk'))
+        return get_object_or_404(self.get_queryset(), employee_pk=self.kwargs.get('employee_pk'))
 
 
 class FeaturesAPIView(generics.ListCreateAPIView):
