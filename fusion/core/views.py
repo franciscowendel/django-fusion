@@ -3,12 +3,22 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from .models import (
     Service,
+    Position,
     Employee,
     Feature,
 
 )
 from django.contrib import messages
 from .forms import ContactForm
+
+from rest_framework import generics
+from .serializers import (
+    ServiceSerializer,
+    PositionSerializer,
+    EmployeeSerializer,
+    FeatureSerializer,
+
+)
 
 
 class IndexView(FormView):
@@ -31,3 +41,46 @@ class IndexView(FormView):
     def form_invalid(self, form, *args, **kwargs):
         messages.error(self.request, _('Erro ao enviar a mensagem!'))
         return super(IndexView, self).form_invalid(form, *args, **kwargs)  # noqa
+
+
+# API Versão 1 usando 'generics'
+
+
+class ServicesAPIView(generics.ListCreateAPIView):
+    queryset = Service.objects.all()  # noqa
+    serializer_class = ServiceSerializer
+
+
+class ServiceAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Service.objects.all()  # noqa
+    serializer_class = ServiceSerializer
+
+
+class PositionsAPIView(generics.ListCreateAPIView):
+    queryset = Position.objects.all()  # noqa
+    serializer_class = PositionSerializer
+
+
+class PositionAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Position.objects.all()  # noqa
+    serializer_class = PositionSerializer
+
+
+class EmployeesAPIView(generics.ListCreateAPIView):
+    queryset = Employee.objects.all()  # noqa
+    serializer_class = EmployeeSerializer
+
+
+class EmployeeAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Employee.objects.all()  # noqa
+    serializer_class = EmployeeSerializer
+
+
+class FeaturesAPIView(generics.ListCreateAPIView):
+    queryset = Feature.objects.all()  # noqa
+    serializer_class = FeatureSerializer
+
+
+class FeatureAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Feature.objects.all()  # noqa
+    serializer_class = FeatureSerializer
