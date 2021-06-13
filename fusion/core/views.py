@@ -21,6 +21,8 @@ from .serializers import (
 )
 from rest_framework.generics import get_object_or_404
 
+from rest_framework import viewsets
+
 
 class IndexView(FormView):
     form_class = ContactForm
@@ -96,3 +98,16 @@ class FeaturesAPIView(generics.ListCreateAPIView):
 class FeatureAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Feature.objects.all()  # noqa
     serializer_class = FeatureSerializer
+
+
+# API versão 2 usando 'viewsets'
+
+
+class ServiceViewSet(viewsets.ModelViewSet):
+    queryset = Service.objects.all()  # noqa
+    serializer_class = ServiceSerializer
+
+
+class PositionViewSet(viewsets.ModelViewSet):
+    queryset = Position.objects.all()  # noqa
+    serializer_class = PositionSerializer
