@@ -26,6 +26,12 @@ from rest_framework import mixins
 
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from .permissions import (
+    EsuperUserPost,
+    EsuperUserPut,
+    EsuperUserDelete,
+)
+from rest_framework import permissions
 
 
 class IndexView(FormView):
@@ -113,6 +119,12 @@ class ServiceViewSet(viewsets.ModelViewSet):
 
 
 class PositionViewSet(viewsets.ModelViewSet):
+    permission_classes = (
+        permissions.DjangoModelPermissions,
+        EsuperUserPost,
+        EsuperUserPut,
+        EsuperUserDelete,
+    )
     queryset = Position.objects.all()  # noqa
     serializer_class = PositionSerializer
 
