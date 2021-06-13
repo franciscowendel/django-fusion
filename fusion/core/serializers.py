@@ -21,19 +21,6 @@ class ServiceSerializer(serializers.ModelSerializer):
         )
 
 
-class PositionSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Position
-        fields = (
-            'id',
-            'position',
-            'created',
-            'updated',
-            'is_active',
-        )
-
-
 class EmployeeSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -49,6 +36,23 @@ class EmployeeSerializer(serializers.ModelSerializer):
             'created',
             'updated',
             'is_active',
+        )
+
+
+class PositionSerializer(serializers.ModelSerializer):
+
+    employees = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='employee-detail')
+
+    class Meta:
+
+        model = Position
+        fields = (
+            'id',
+            'position',
+            'created',
+            'updated',
+            'is_active',
+            'employees',
         )
 
 
