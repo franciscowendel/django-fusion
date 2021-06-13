@@ -24,7 +24,7 @@ class ServiceSerializer(serializers.ModelSerializer):
 class PositionSerializer(serializers.ModelSerializer):
 
     class Meta:
-        models = Position
+        model = Position
         fields = (
             'id',
             'position',
