@@ -30,4 +30,8 @@ urlpatterns = [
     path('features/', FeaturesAPIView.as_view(), name='features'),
     path('features/<int:pk>/', FeatureAPIView.as_view(), name='feature'),
 
+    path('positions/<int:position_pk>/employees/', EmployeesAPIView.as_view(), name='position_employees'),
+    path('positions/<int:position_pk>/employees/<int:employee_pk>/', EmployeeAPIView.as_view(), name='position_employee'
+         ),
+
 ]
