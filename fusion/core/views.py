@@ -24,6 +24,9 @@ from rest_framework.generics import get_object_or_404
 from rest_framework import viewsets
 from rest_framework import mixins
 
+from rest_framework.decorators import action
+from rest_framework.response import Response
+
 
 class IndexView(FormView):
     form_class = ContactForm
@@ -112,6 +115,19 @@ class ServiceViewSet(viewsets.ModelViewSet):
 class PositionViewSet(viewsets.ModelViewSet):
     queryset = Position.objects.all()  # noqa
     serializer_class = PositionSerializer
+
+    @action(detail=True, methods=['get'])
+    def employees(self, request, pk=None):  # noqa
+        self.pagination_class.page_size = 1
+        employees = Employee.objects.filter(position_id=pk)  # noqa
+        page = self.paginate_queryset(employees)
+
+        if page is not None:
+            serializer = EmployeeSerializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
+
+        serializer = EmployeeSerializer(employees, many=True)
+        return Response(serializer.data)
 
 
 # API  versão 2 usando 'mixins'
