@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-11 21:42-0300\n"
+"POT-Creation-Date: 2021-06-14 20:16-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,10 +158,209 @@ msgstr ""
 msgid "Features"
 msgstr ""
 
-#: fusion/core/views.py:28
+#: fusion/core/templates/404.html:11
+msgid "Página não encontrada"
+msgstr ""
+
+#: fusion/core/templates/404.html:12
+msgid "Infelizmente essa página não existe, volte pra página inicial"
+msgstr ""
+
+#: fusion/core/templates/404.html:14 fusion/core/templates/500.html:14
+msgid "Página inicial"
+msgstr ""
+
+#: fusion/core/templates/500.html:11
+msgid "Erro no processamento"
+msgstr ""
+
+#: fusion/core/templates/500.html:12
+msgid ""
+"Infelizmente o servidor não está respondendo, tente movamente mais tarde"
+msgstr ""
+
+#: fusion/core/templates/about.html:11
+msgid "Gerencie suas estatísticas"
+msgstr ""
+
+#: fusion/core/templates/about.html:12
+msgid "Estatísticas detalhadas da sua empresa"
+msgstr ""
+
+#: fusion/core/templates/about.html:23 fusion/core/templates/hero.html:13
+msgid "Saiba mais"
+msgstr ""
+
+#: fusion/core/templates/base.html:47
+msgid "Início"
+msgstr ""
+
+#: fusion/core/templates/base.html:52
+msgid "Serviços"
+msgstr ""
+
+#: fusion/core/templates/base.html:57
+msgid "Equipe"
+msgstr ""
+
+#: fusion/core/templates/base.html:62 fusion/core/templates/pricing.html:7
+msgid "Preços"
+msgstr ""
+
+#: fusion/core/templates/base.html:67
+msgid "Clientes"
+msgstr ""
+
+#: fusion/core/templates/call.html:9
+msgid "Ganhe 30 dias grátis"
+msgstr ""
+
+#: fusion/core/templates/call.html:10
+msgid "Teste o recurso por 30 dias e cancele a qualquer momento."
+msgstr ""
+
+#: fusion/core/templates/call.html:14
+msgid "Cadastre-se agora"
+msgstr ""
+
+#: fusion/core/templates/contact.html:7
+msgid "Contate-nos"
+msgstr ""
+
+#: fusion/core/templates/features.html:7
+msgid "Recurso incríveis"
+msgstr ""
+
+#: fusion/core/templates/footer.html:23
+msgid "Produtos"
+msgstr ""
+
+#: fusion/core/templates/footer.html:33
+msgid "Recursos"
+msgstr ""
+
+#: fusion/core/templates/footer.html:43
+msgid "Contato"
+msgstr ""
+
+#: fusion/core/templates/footer.html:64
+msgid "Todos direitos reservados"
+msgstr ""
+
+#: fusion/core/templates/hero.html:9
+msgid "App, Business & SaaS"
+msgstr ""
+
+#: fusion/core/templates/hero.html:9
+msgid "Landing Page Template"
+msgstr ""
+
+#: fusion/core/templates/hero.html:10
+msgid ""
+"Fusion é um modelo de aplicativo, negócios, SaaS e página de destino de "
+"produto gratuito de alta qualidade, equipado com a versão mais recente do "
+"Bootstrap 4. O Fusion não apenas facilita a criação de sua página de "
+"destino, mas também vem com um design moderno e moderno e todos os elementos "
+"essenciais da interface do usuário. O layout responsivo do Fusion se encaixa "
+"perfeitamente em todos os principais tamanhos de tela. Se você deseja criar "
+"ou melhorar a presença online e reconstruir a plataforma para produtos, "
+"negócios ou aplicativos, o Fusion é uma ótima escolha para você."
+msgstr ""
+
+#: fusion/core/templates/hero.html:12
+msgid "Baixe agora"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:17
+msgid "10 reais"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:17 fusion/core/templates/pricing.html:37
+msgid "/mês"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:20
+msgid "Pro"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:23
+msgid "1 usuário"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:26 fusion/core/templates/pricing.html:46
+#: fusion/core/templates/pricing.html:66
+msgid "Atualizações pra vida toda"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:28 fusion/core/templates/pricing.html:48
+#: fusion/core/templates/pricing.html:68
+msgid "Compre agora"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:37
+msgid "35 reais"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:40
+msgid "Plus"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:43
+msgid "10 usuários"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:44
+msgid "30 GB de armazenamento"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:45
+msgid "Suporte ao email prioritário"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:60
+msgid "Premium"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:63
+msgid "Usuários ilimitados"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:64
+msgid "Armazenamento ilimitado"
+msgstr ""
+
+#: fusion/core/templates/pricing.html:65
+msgid "Suporte 24/7"
+msgstr ""
+
+#: fusion/core/templates/services.html:7
+msgid "Nossos serviços"
+msgstr ""
+
+#: fusion/core/templates/team.html:7
+msgid "Conheça nosso time"
+msgstr ""
+
+#: fusion/core/templates/testimonial.html:16
+msgid "Diretor de criação"
+msgstr ""
+
+#: fusion/core/templates/testimonial.html:37
+msgid "Desenvoldor Front-end"
+msgstr ""
+
+#: fusion/core/templates/testimonial.html:58
+msgid "Designer"
+msgstr ""
+
+#: fusion/core/templates/testimonial.html:79
+msgid "Desenvolvedora Back-end"
+msgstr ""
+
+#: fusion/core/views.py:51
 msgid "Mensagem enviada com sucesso!"
 msgstr ""
 
-#: fusion/core/views.py:32
+#: fusion/core/views.py:55
 msgid "Erro ao enviar a mensagem!"
 msgstr ""
