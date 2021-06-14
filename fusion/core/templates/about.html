@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!-- About Section start -->
     <div class="about-area section-padding bg-gray">
       <div class="container">
@@ -7,19 +8,19 @@
             <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
               <div>
                 <div class="site-heading">
-                  <p class="mb-3">Gerencie suas estatísticas</p>
-                  <h2 class="section-title">Estatísticas detalhadas da sua empresa</h2>
+                  <p class="mb-3">{% trans 'Gerencie suas estatísticas' %}</p>
+                  <h2 class="section-title">{% trans 'Estatísticas detalhadas da sua empresa' %}</h2>
                 </div>
                 <div class="content">
                   <p>
-                    Com a Fusion, você tem informações detalhadas sobre os gastos com anúncios em cada país. Além disso,
+                    {% trans 'Com a Fusion, você tem informações detalhadas sobre os gastos com anúncios em cada país. Além disso,
                     o portal do site oferece um resumo dos dados mais valiosos, fazendo com que ele seja uma das melhores
                     fontes de estatísticas disponíveis no mercado.
                     Além disso, a Fusion disponibiliza relatórios sobre o futuro do marketing digital em diversos países,
                     como Reino Unido e demais nações europeias, além de EUA e Brasil. Normalmente, as informações são atualizadas
-                    anualmente.
+                    anualmente.' %}
                   </p>
-                  <a href="{% url 'index' %}" class="btn btn-common mt-3">Saiba mais</a>
+                  <a href="{% url 'index' %}" class="btn btn-common mt-3">{% trans 'Saiba mais' %}</a>
                 </div>
               </div>
             </div>

@@ -1,16 +1,17 @@
 {% load static %}
+{% load i18n %}
 <!-- Call To Action Section Start -->
     <section id="cta" class="section-padding">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.3s">
             <div class="cta-text">
-              <h4>Ganhe 30 dias grátis</h4>
-              <p>Teste o recurso por 30 dias e cancele a qualquer momento.</p>
+              <h4>{% trans 'Ganhe 30 dias grátis' %}</h4>
+              <p>{% trans 'Teste o recurso por 30 dias e cancele a qualquer momento.' %}</p>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-xs-12 text-right wow fadeInRight" data-wow-delay="0.3s">
-            </br><a href="#" class="btn btn-common">Cadastre-se agora</a>
+            </br><a href="#" class="btn btn-common">{% trans 'Cadastre-se agora' %}</a>
           </div>
         </div>
       </div>

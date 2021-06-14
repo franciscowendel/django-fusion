@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 <!-- Hero Area Start -->
       <div id="hero-area" class="hero-area-bg">
@@ -7,10 +8,10 @@
           <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
               <div class="contents">
-                <h2 class="head-title">404<br>Página não encontrada</h2>
-                <p>Infelizmente essa página não existe, volte pra página inicial</p>
+                <h2 class="head-title">404<br>{% trans 'Página não encontrada' %}</h2>
+                <p>{% trans 'Infelizmente essa página não existe, volte pra página inicial' %}</p>
                 <div class="header-button">
-                  <a href="{% url 'index' %}" class="btn btn-common">Página inicial</a>
+                  <a href="{% url 'index' %}" class="btn btn-common">{% trans 'Página inicial' %}</a>
                 </div>
               </div>
             </div>

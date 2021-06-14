@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!-- Footer Section Start -->
     <footer id="footer" class="footer-area section-padding">
       <div class="container">
@@ -8,7 +9,7 @@
               <div class="widget">
                 <h3 class="footer-logo"><img src="{% static 'img/logo.png' %}" alt=""></h3>
                 <div class="textwidget">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis tincidunt est, et euismod purus suscipit quis.</p>
+                  <p></p>
                 </div>
                 <div class="social-icon">
                   <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
@@ -19,7 +20,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Produtos</h3>
+              <h3 class="footer-titel">{% trans 'Produtos' %}</h3>
               <ul class="footer-link">
                 <li><a href="#">Tracking</a></li>
                 <li><a href="#">Application</a></li>
@@ -29,7 +30,7 @@
               </ul>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Recursos</h3>
+              <h3 class="footer-titel">{% trans 'Recursos' %}</h3>
               <ul class="footer-link">
                 <li><a href="#">Payment Options</a></li>
                 <li><a href="#">Fee Schedule</a></li>
@@ -39,13 +40,13 @@
               </ul>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Contato</h3>
+              <h3 class="footer-titel">{% trans 'Contato' %}</h3>
               <ul class="address">
                 <li>
                   <a href="#"><i class="lni-map-marker"></i> 105 Madison Avenue - <br> Third Floor New York, NY 10016</a>
                 </li>
                 <li>
-                  <a href="#"><i class="lni-phone-handset"></i> P: +84 846 250 592</a>
+                  <a href="#"><i class="lni-phone-handset"></i>4022-8922</a>
                 </li>
                 <li>
                   <a href="mailto:fusion@gmail.com"><i class="lni-envelope"></i>fusion@gmail.com</a>
@@ -60,7 +61,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="copyright-content">
-                <p>{% now 'Y' %} Copyright © 2020<a rel="nofollow" href="https://uideck.com"> UIdeck </a> Todos direitos reservados</p>
+                <p>Copyright © {% now 'Y' %}<a rel="nofollow" href="https://uideck.com"> UIdeck </a>{% trans 'Todos direitos reservados' %}</p>
               </div>
             </div>
           </div>

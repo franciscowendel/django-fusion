@@ -1,15 +1,16 @@
 {% load static %}
+{% load i18n %}
 <!-- Hero Area Start -->
       <div id="hero-area" class="hero-area-bg">
         <div class="container">
           <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
               <div class="contents">
-                <h2 class="head-title">App, Business & SaaS<br>Landing Page Template</h2>
-                <p>Fusion é um modelo de aplicativo, negócios, SaaS e página de destino de produto gratuito de alta qualidade, equipado com a versão mais recente do Bootstrap 4. O Fusion não apenas facilita a criação de sua página de destino, mas também vem com um design moderno e moderno e todos os elementos essenciais da interface do usuário. O layout responsivo do Fusion se encaixa perfeitamente em todos os principais tamanhos de tela. Se você deseja criar ou melhorar a presença online e reconstruir a plataforma para produtos, negócios ou aplicativos, o Fusion é uma ótima escolha para você.</p>
+                <h2 class="head-title">{% trans 'App, Business & SaaS' %}<br>{% trans 'Landing Page Template' %}</h2>
+                <p>{% trans 'Fusion é um modelo de aplicativo, negócios, SaaS e página de destino de produto gratuito de alta qualidade, equipado com a versão mais recente do Bootstrap 4. O Fusion não apenas facilita a criação de sua página de destino, mas também vem com um design moderno e moderno e todos os elementos essenciais da interface do usuário. O layout responsivo do Fusion se encaixa perfeitamente em todos os principais tamanhos de tela. Se você deseja criar ou melhorar a presença online e reconstruir a plataforma para produtos, negócios ou aplicativos, o Fusion é uma ótima escolha para você.' %}</p>
                 <div class="header-button">
-                  <a href="{% url 'index' %}" class="btn btn-common">Baixe agora</a>
-                  <a href="{% url 'index' %}" class="btn btn-border video-popup">Saiba mais</a>
+                  <a href="{% url 'index' %}" class="btn btn-common">{% trans 'Baixe agora' %}</a>
+                  <a href="{% url 'index' %}" class="btn btn-border video-popup">{% trans 'Saiba mais' %}</a>
                 </div>
               </div>
             </div>
