@@ -1,7 +1,6 @@
 # django-fusion-web-page
 
-Just a little web page called Fusion using Django and Django REST Framework in it.
-Not a big deal!
+Just a little web page called Fusion built using Django and Django REST Framework in it.
 
 Como executar o projeto:
 
