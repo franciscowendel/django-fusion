@@ -1,6 +1,7 @@
 # django-fusion-web-page
 
 _A web page called Fusion using Django; and to work with API I use Django REST Framework_
+
 **Como executar o projeto**:
 
 1. Caso não tenha o _pipenv_ instalado:
