@@ -1,7 +1,6 @@
 # django-fusion-web-page
 
-_A web page called Fusion using Django; and to work with API I use Django REST Framework in it.
-Not a big deal!_
+_A web page called Fusion using Django; and to work with API I use Django REST Framework (to work with API)_
 
 **Como executar o projeto**:
 
