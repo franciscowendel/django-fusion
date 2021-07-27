@@ -21,6 +21,7 @@ requests = "*"
 collectfast = "*"
 sentry-sdk = "*"
 model-bakery = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.8"
