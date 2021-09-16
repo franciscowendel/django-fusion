@@ -20,7 +20,6 @@ pytest-cov = "*"
 codecov = "*"
 requests = "*"
 collectfast = "*"
-sentry-sdk = "*"
 model-bakery = "*"
 coverage = "*"
 
