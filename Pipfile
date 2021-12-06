@@ -10,7 +10,6 @@ psycopg2-binary = "*"
 python-decouple = "*"
 django-stdimage = "*"
 djangorestframework = "*"
-coverage = "==6.0b1"
 dj-static = "*"
 
 [dev-packages]
