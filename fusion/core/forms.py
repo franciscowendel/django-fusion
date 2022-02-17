@@ -1,6 +1,4 @@
 from django import forms
-
-from django.utils.translation import gettext_lazy as _
 from django.core.mail import EmailMessage
 
 
@@ -16,10 +14,10 @@ class ContactForm(forms.Form):
         subject = self.cleaned_data['subject']
         message = self.cleaned_data['message']
 
-        n = _('Name')
-        e = _('Email')
-        s = _('Subject')
-        m = _('Message')
+        n = 'Name'
+        e = 'Email'
+        s = 'Subject'
+        m = 'Message'
 
         content = f'{n}: {name}\n{e}: {email}\n{s}: {subject}\n{m}: {message}'
 

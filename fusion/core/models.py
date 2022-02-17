@@ -21,20 +21,20 @@ class Base(models.Model):
 
 class Service(Base):
     ICONE_SERVICES = (
-        ('lni-cog', _('Engrenagem')),
-        ('lni-stats-up', _('Estatísticas')),
-        ('lni-users', _('Usuários')),
-        ('lni-layers', _('Camadas')),
-        ('lni-mobile', _('Mobile')),
-        ('lni-rocket', _('Foguete'))
+        ('lni-cog', 'Engrenagem'),
+        ('lni-stats-up', 'Estatísticas'),
+        ('lni-users', 'Usuários'),
+        ('lni-layers', 'Camadas'),
+        ('lni-mobile', 'Mobile'),
+        ('lni-rocket', 'Foguete')
     )
     service = models.CharField(max_length=120)
     description = models.TextField(default='', blank=True)
     icon = models.CharField(choices=ICONE_SERVICES, max_length=50)
 
     class Meta:
-        verbose_name = _('Service')
-        verbose_name_plural = _('Services')
+        verbose_name = 'Service'
+        verbose_name_plural = 'Services'
 
     def __str__(self):
         return self.service
@@ -44,8 +44,8 @@ class Position(Base):
     position = models.CharField(max_length=130)
 
     class Meta:
-        verbose_name = _('Position')
-        verbose_name_plural = _('Positions')
+        verbose_name = 'Position'
+        verbose_name_plural = 'Positions'
         ordering = ['id']
 
     def __str__(self):
@@ -62,8 +62,8 @@ class Employee(Base):
     instagram = models.CharField(max_length=60, default='#')
 
     class Meta:
-        verbose_name = _('Employee')
-        verbose_name_plural = _('Employees')
+        verbose_name = 'Employee'
+        verbose_name_plural = 'Employees'
         ordering = ['id']
 
     def __str__(self):
@@ -72,20 +72,20 @@ class Employee(Base):
 
 class Feature(Base):
     ICONES_FEATURES = (
-        ('lni-rocket', _('Foguete')),
-        ('lni-laptop-phone', _('API')),
-        ('lni-cog', _('Engrenagem')),
-        ('lni-leaf', _('Folha')),
-        ('lni-layers', _('Camadas')),
-        ('lni-leaf', _('Folha')),
+        ('lni-rocket', 'Foguete'),
+        ('lni-laptop-phone', 'API'),
+        ('lni-cog', 'Engrenagem'),
+        ('lni-leaf', 'Folha'),
+        ('lni-layers', 'Camadas'),
+        ('lni-leaf', 'Folha'),
     )
     feature = models.CharField(max_length=120)
     description = models.TextField(default='', blank=True)
     icon = models.CharField(max_length=60, choices=ICONES_FEATURES)
 
     class Meta:
-        verbose_name = _('Feature')
-        verbose_name_plural = _('Features')
+        verbose_name = 'Feature'
+        verbose_name_plural = 'Features'
 
     def __str__(self):
         return self.feature
