@@ -54,7 +54,7 @@ python manage.py createsuperuser
 
 <br>
 
-6. Rodar o servidor:
+6. Rode o servidor:
 - Execute o _shell_ do _pipenv_:
 ```console
 pipenv shell
