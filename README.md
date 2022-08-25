@@ -2,7 +2,7 @@
 
 _A web page called Fusion built using Django; and to work with API: Django REST Framework._
 
-**Como executar o projeto**:
+**Como executar o projeto localmente**:
 
 1. Caso não tenha o _pipenv_ instalado:
 ```console
@@ -12,7 +12,7 @@ pipenv sync -d
 
 <br>
 
-2. Caso tenha o _pipenv_ instalado:
+2. Caso já tenha o _pipenv_ instalado:
 ```console
 pipenv sync -d
 ```
@@ -27,13 +27,12 @@ pipenv sync -d
 
 <br>
 
-4. Fazer as migrações necessárias para o projeto funcionar:
+4. Faça as migrações necessárias para o projeto funcionar:
 
 - Execute o _shell_ do _pipenv_:
 ```console
 pipenv shell
 ```
-- Faça as migrações:
 ```console
 python manage.py makemigrations
 
@@ -42,14 +41,13 @@ python manage.py migrate
 
 <br>
 
-5. Criar um superusuário:
+5. Crie um superusuário:
 
 - Execute o _shell_ do _pipenv_:
 
 ```console
 pipenv shell
 ```
-- Crie o superusuário:
 ```console
 python manage.py createsuperuser
 ```
@@ -61,15 +59,13 @@ python manage.py createsuperuser
 ```console
 pipenv shell
 ```
-
-- Rode o servidor:
 ```console
 python manage.py runserver
 ```
 
 <br>
 
-7. Entrar no admin do projeto:
+7. Entre no admin do projeto:
 - http://127.0.0.1:8000/admin/
 
 <br>
