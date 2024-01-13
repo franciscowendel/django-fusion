@@ -15,7 +15,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import dj_database_url
-from decouple import (
+from decouple import ( # noqa
     config, 
     Csv
 )
