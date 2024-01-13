@@ -39,3 +39,7 @@ urlpatterns = [
     # API (2) Viewsets
     path('api/v2/', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = 'Fusion'
+admin.site.index_title = 'Fusion Administration'
+admin.site.site_title = 'Fusion'
