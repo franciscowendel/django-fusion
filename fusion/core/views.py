@@ -47,15 +47,15 @@ class IndexView(FormView):
 
     def form_valid(self, form, *args, **kwargs):
         form.send_mail()
-        messages.success(self.request, ('Message sent successfully!'))
+        messages.success(self.request, 'Message sent successfully!')
         return super(IndexView, self).form_valid(form, *args, **kwargs)  # noqa
 
     def form_invalid(self, form, *args, **kwargs):
-        messages.error(self.request, ('Error sending message!'))
+        messages.error(self.request, 'Error sending message!')
         return super(IndexView, self).form_invalid(form, *args, **kwargs)  # noqa
 
 
-# API Versão 1 usando 'generics'
+# API Version 1 using 'generics'
 
 
 class ServicesAPIView(generics.ListCreateAPIView):
@@ -109,7 +109,7 @@ class FeatureAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = FeatureSerializer
 
 
-# API versão 2 usando 'viewsets'
+# API version 2 using 'viewsets'
 
 
 class ServiceViewSet(viewsets.ModelViewSet):
