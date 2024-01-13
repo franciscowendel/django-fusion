@@ -1,14 +1,19 @@
 from django.urls import path
 from .views import (
     IndexView,
+
     ServicesAPIView,
     ServiceAPIView,
-    PositionsAPIView,
-    PositionAPIView,
+
+    RolesAPIView,
+    RoleAPIView,
+
     EmployeesAPIView,
     EmployeeAPIView,
+
     FeaturesAPIView,
     FeatureAPIView,
+
     ServiceViewSet,
     PositionViewSet,
     EmployeeViewSet,
@@ -33,19 +38,19 @@ urlpatterns = [
     path('services/<int:pk>/', ServiceAPIView.as_view(), name='service'),
 
     # positions
-    path('positions/', PositionsAPIView.as_view(), name='positions'),
-    path('positions/<int:pk>/', PositionAPIView.as_view(), name='position'),
+    path('roles/', RolesAPIView.as_view(), name='roles'),
+    path('roles/<int:pk>/', RoleAPIView.as_view(), name='role'),
 
     # employees
     path('employees/', EmployeesAPIView.as_view(), name='employees'),
-    path('employees/<int:pk>/', EmployeeAPIView.as_view(), name='employee'),
+    path('employees/<int:employee_pk>/', EmployeeAPIView.as_view(), name='employee'),
 
     # features
     path('features/', FeaturesAPIView.as_view(), name='features'),
     path('features/<int:pk>/', FeatureAPIView.as_view(), name='feature'),
 
-    path('positions/<int:position_pk>/employees/', EmployeesAPIView.as_view(), name='position_employees'),
-    path('positions/<int:position_pk>/employees/<int:employee_pk>/', EmployeeAPIView.as_view(), name='position_employee'
+    path('roles/<int:role_pk>/employees/', EmployeesAPIView.as_view(), name='role_employees'),
+    path('roles/<int:role_pk>/employees/<int:employee_pk>/', EmployeeAPIView.as_view(), name='role_employee'
          ),
 
 ]
