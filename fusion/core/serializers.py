@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import (
     Service,
-    Position,
+    Role,
     Employee,
     Feature,
 )
@@ -39,16 +39,22 @@ class EmployeeSerializer(serializers.ModelSerializer):
         )
 
 
-class PositionSerializer(serializers.ModelSerializer):
+class RoleSerializer(serializers.ModelSerializer):
+    # Nested Relationship
+    # employees = EmployeeSerializer(many=True, read_only=True)
 
+    # Primary Key Related Field
+    # employees = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    
+    # Hyper Linked Related Field
     employees = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='employee-detail')
 
     class Meta:
 
-        model = Position
+        model = Role
         fields = (
             'id',
-            'position',
+            'role',
             'created',
             'updated',
             'is_active',
