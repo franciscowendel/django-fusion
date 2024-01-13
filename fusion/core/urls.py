@@ -15,7 +15,7 @@ from .views import (
     FeatureAPIView,
 
     ServiceViewSet,
-    PositionViewSet,
+    RoleViewSet,
     EmployeeViewSet,
     FeatureViewSet,
 )
@@ -25,7 +25,7 @@ from rest_framework.routers import SimpleRouter
 router = SimpleRouter()
 
 router.register('services', ServiceViewSet)
-router.register('positions', PositionViewSet)
+router.register('roles', RoleViewSet)
 router.register('employees', EmployeeViewSet)
 router.register('features', FeatureViewSet)
 
