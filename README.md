@@ -42,7 +42,7 @@ python manage.py runserver
 
 <br>
 
-6. Login into admin:
+6. Login to the admin:
 - http://127.0.0.1:8000/admin/
 
 <br>
