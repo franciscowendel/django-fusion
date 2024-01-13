@@ -1,6 +1,6 @@
 # Django Fusion
 
-_A page called Fusion._
+A page called __Fusion__ with Django as the backend and the Django Rest Framework for the API.
 
 **How execute the project:**
 
