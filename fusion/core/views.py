@@ -71,12 +71,12 @@ class ServiceAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 class RolesAPIView(generics.ListCreateAPIView):
     queryset = Role.objects.all()  # noqa
-    serializer_class = PositionSerializer
+    serializer_class = RoleSerializer
 
 
 class RoleAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Role.objects.all()  # noqa
-    serializer_class = PositionSerializer
+    serializer_class = RoleSerializer
 
 
 class EmployeesAPIView(generics.ListCreateAPIView):
@@ -126,7 +126,7 @@ class RoleViewSet(viewsets.ModelViewSet):
         EsuperUserDelete,
     )
     queryset = Role.objects.all()  # noqa
-    serializer_class = PositionSerializer
+    serializer_class = RoleSerializer
 
     @action(detail=True, methods=['get'])
     def employees(self, request, pk=None):  # noqa
