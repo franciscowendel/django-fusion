@@ -54,7 +54,7 @@ class Role(Base):
 
 class Employee(Base):
     name = models.CharField(max_length=120)
-    position = models.ForeignKey(Role, related_name='employees', on_delete=models.CASCADE)
+    role = models.ForeignKey(Role, related_name='employees', on_delete=models.CASCADE)
     bio = models.TextField(default='', blank=True)
     image = StdImageField(upload_to=shuffle_filename, variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
     facebook = models.CharField(max_length=60, default='#')
