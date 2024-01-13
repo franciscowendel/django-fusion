@@ -1,6 +1,5 @@
 from django.views.generic import FormView
 from django.urls import reverse_lazy
-from django.utils.translation import gettext as _
 from .models import (
     Service,
     Role,
@@ -48,11 +47,11 @@ class IndexView(FormView):
 
     def form_valid(self, form, *args, **kwargs):
         form.send_mail()
-        messages.success(self.request, _('Mensagem enviada com sucesso!'))
+        messages.success(self.request, ('Message sent successfully!'))
         return super(IndexView, self).form_valid(form, *args, **kwargs)  # noqa
 
     def form_invalid(self, form, *args, **kwargs):
-        messages.error(self.request, _('Erro ao enviar a mensagem!'))
+        messages.error(self.request, ('Error sending message!'))
         return super(IndexView, self).form_invalid(form, *args, **kwargs)  # noqa
 
 
