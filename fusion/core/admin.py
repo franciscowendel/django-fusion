@@ -19,7 +19,7 @@ class RoleAdmin(admin.ModelAdmin):
 
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'position', 'bio', 'created', 'updated', 'is_active')
+    list_display = ('name', 'role', 'bio', 'created', 'updated', 'is_active')
 
 
 @admin.register(Feature)
