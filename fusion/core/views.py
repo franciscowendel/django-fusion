@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from .models import (
     Service,
-    Position,
+    Role,
     Employee,
     Feature,
 
@@ -14,7 +14,7 @@ from .forms import ContactForm
 from rest_framework import generics
 from .serializers import (
     ServiceSerializer,
-    PositionSerializer,
+    RoleSerializer,
     EmployeeSerializer,
     FeatureSerializer,
 
@@ -69,13 +69,13 @@ class ServiceAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ServiceSerializer
 
 
-class PositionsAPIView(generics.ListCreateAPIView):
-    queryset = Position.objects.all()  # noqa
+class RolesAPIView(generics.ListCreateAPIView):
+    queryset = Role.objects.all()  # noqa
     serializer_class = PositionSerializer
 
 
-class PositionAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Position.objects.all()  # noqa
+class RoleAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Role.objects.all()  # noqa
     serializer_class = PositionSerializer
 
 
@@ -84,8 +84,8 @@ class EmployeesAPIView(generics.ListCreateAPIView):
     serializer_class = EmployeeSerializer
 
     def get_queryset(self):
-        if self.kwargs.get('position_pk'):
-            return self.queryset.filter(position_id=self.kwargs.get('position_pk'))
+        if self.kwargs.get('role_pk'):
+            return self.queryset.filter(role_id=self.kwargs.get('role_pk'))
         return self.queryset.all()
 
 
@@ -94,8 +94,8 @@ class EmployeeAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = EmployeeSerializer
 
     def get_object(self):
-        if self.kwargs.get('position_pk'):
-            return get_object_or_404(self.get_queryset(), position_id=self.kwargs.get('position_pk'),
+        if self.kwargs.get('role_pk'):
+            return get_object_or_404(self.get_queryset(), role_id=self.kwargs.get('role_pk'),
                                      pk=self.kwargs.get('employee_pk'))
         return get_object_or_404(self.get_queryset(), pk=self.kwargs.get('employee_pk'))
 
@@ -118,20 +118,20 @@ class ServiceViewSet(viewsets.ModelViewSet):
     serializer_class = ServiceSerializer
 
 
-class PositionViewSet(viewsets.ModelViewSet):
+class RoleViewSet(viewsets.ModelViewSet):
     permission_classes = (
         permissions.DjangoModelPermissions,
         EsuperUserPost,
         EsuperUserPut,
         EsuperUserDelete,
     )
-    queryset = Position.objects.all()  # noqa
+    queryset = Role.objects.all()  # noqa
     serializer_class = PositionSerializer
 
     @action(detail=True, methods=['get'])
     def employees(self, request, pk=None):  # noqa
         self.pagination_class.page_size = 1
-        employees = Employee.objects.filter(position_id=pk)  # noqa
+        employees = Employee.objects.filter(role_id=pk)  # noqa
         page = self.paginate_queryset(employees)
 
         if page is not None:
