@@ -16,7 +16,7 @@ from django.utils.html import escape
 from django.utils.translation import gettext, gettext_lazy as _
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
-from fusion.base.models import User
+from fusion.custom_user.models import User
 
 csrf_protect_m = method_decorator(csrf_protect)
 sensitive_post_parameters_m = method_decorator(sensitive_post_parameters())
@@ -45,7 +45,7 @@ class UserAdmin(admin.ModelAdmin):
     list_display = ('email', 'first_name', 'is_staff')
     list_filter = ('is_staff', 'is_superuser', 'is_active', 'groups')
     search_fields = ('first_name', 'email')
-    ordering = ('email',)
+    ordering = ('first_name',)
     filter_horizontal = ('groups', 'user_permissions',)
 
     def get_fieldsets(self, request, obj=None):
