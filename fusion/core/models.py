@@ -72,12 +72,12 @@ class Employee(Base):
 
 class Feature(Base):
     FEATURES_ICONS = (
-        ('lni-rocket', 'Foguete'),
+        ('lni-rocket', 'Rocket'),
         ('lni-laptop-phone', 'API'),
-        ('lni-cog', 'Engrenagem'),
-        ('lni-leaf', 'Folha'),
-        ('lni-layers', 'Camadas'),
-        ('lni-leaf', 'Folha'),
+        ('lni-cog', 'Cog'),
+        ('lni-leaf', 'Leaf'),
+        ('lni-layers', 'Layers'),
+        ('lni-leaf', 'Leaf'),
     )
     feature = models.CharField(max_length=120)
     description = models.TextField(default='', blank=True)
