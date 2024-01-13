@@ -15,8 +15,10 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import dj_database_url
-from decouple import config, Csv
-
+from decouple import (
+    config, 
+    Csv
+)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -44,6 +46,8 @@ INSTALLED_APPS = [
 
     'fusion.custom_user',
     'fusion.core',
+    
+    'stdimage',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -145,7 +149,19 @@ LOGOUT_REDIRECT_URL = 'index'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Local email config
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Production email config:
+"""
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'youremail@yourdomain.com'
+EMAIL_PORT = 587
+EMAIL_USE_TSL = True
+EMAIL_HOST_PASSWORD = 'yourpassword'
+
+DEFAULT_FROM_EMAIL = 'youremail'
+"""
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
