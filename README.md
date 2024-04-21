@@ -6,7 +6,7 @@ A page called __Fusion__ with Django as the backend and the Django Rest Framewor
 
 1. Install all dependencies for the project to work:
 ```pip
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 <br>
